@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breast Cancer Diagnosis Prediction</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url("https://images.pexels.com/photos/3900426/pexels-photo-3900426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        
+        h1 {
+            font-size: 30px; /* Adjust the font size as needed */
+        }
+        .registration-form {
+            padding: 50px 0;
+        }
+
+        .registration-form form {
+            background-color: #fff;
+            max-width: 600px;
+            margin: auto;
+            padding: 50px 70px;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+        }
+
+        .registration-form .form-group {
+            margin-bottom: 25px;
+        }
+
+        .registration-form .item {
+            border-radius: 20px;
+            padding: 10px 20px;
+        }
+
+        .registration-form .create-account {
+            border-radius: 30px;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            background-color: #f9c4d4;
+            border: none;
+            color: white;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 576px) {
+            .registration-form form {
+                padding: 50px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="registration-form">
+    
+    <form action="/" method="post">
+        <h1>Enter Clinical Measurements</h1>
+        <div class="form-group">
+        <label for="radius_mean">Radius Mean:</label>
+        <input type="text" class="form-control item" id="radius_mean" name="radius_mean"><br><br>
+        </div>
+        <div class="form-group">
+        <label for="texture_mean">Texture Mean:</label>
+        <input type="text" class="form-control item" id="texture_mean" name="texture_mean"><br><br>
+        </div>
+        <div class="form-group">
+        <label for="perimeter_mean">perimeter Mean:</label>
+        <input type="text" class="form-control item" id="perimeter_mean" name="perimeter_mean"><br><br>
+        </div>
+        <div class="form-group">
+        <label for="area_mean">area Mean:</label>
+        <input type="text" class="form-control item" id="area_mean" name="area_mean"><br><br>
+        </div>
+        <div class="form-group">
+        <label for="smoothness_mean">smoothness Mean:</label>
+        <input type="text" class="form-control item" id="smoothness_mean" name="smoothness_mean"><br><br>
+        </div>
+        <div class="form-group">
+        <label for="compactness_mean">compactness Mean:</label>
+        <input type="text" class="form-control item" id="compactness_mean" name="compactness_mean"><br><br>
+        </div>
+        <div class="form-group">
+        <label for="concavity_mean">concavity Mean:</label>
+        <input type="text" class="form-control item" id="concavity_mean" name="concavity_mean"><br><br>
+        </div>
+        <div class="form-group">
+        <label for="concave points_mean">concave points_mean:</label>
+        <input type="text" class="form-control item" id="concave points_mean" name="concave points_mean"><br><br>
+        </div>
+        <div class="form-group">
+        <label for="symmetry_mean">symmetry_mean:</label>
+        <input type="text" class="form-control item" id="symmetry_mean" name="symmetry_mean"><br><br>
+        </div>
+        <div class="form-group">
+        <label for="fractal_dimension_mean">Fractal Dimension Mean:</label>
+        <input type="text" class="form-control item" id="fractal_dimension_mean" name="fractal_dimension_mean"><br><br>
+        </div>
+        <div class="form-group">
+        <label for="radius_se">Radius SE:</label>
+        <input type="text" class="form-control item" id="radius_se" name="radius_se"><br><br>
+        </div>
+        <div class="form-group">
+        <label for="texture_se">Texture SE:</label>
+        <input type="text" class="form-control item" id="texture_se" name="texture_se"><br><br>
+        </div>
+        <div class="form-group">
+        <label for="perimeter_se">Perimeter SE:</label>
+        <input type="text" class="form-control item" id="perimeter_se" name="perimeter_se"><br><br>
+        </div>
+        <div class="form-group">
+        <label for="area_se">area SE:</label>
+        <input type="text" class="form-control item" id="area_se" name="area_se"><br><br>
+        </div>
+        <div class="form-group">
+        <label for="smoothness_se">smoothness SE:</label>
+        <input type="text" class="form-control item" id="smoothness_se" name="smoothness_se"><br><br>
+        </div>
+        <div class="form-group">
+        <label for="compactness_se">compactness SE:</label>
+        <input type="text" class="form-control item" id="compactness_se" name="compactness_se"><br><br>
+        </div>
+        <div class="form-group">
+        <label for="concavity_se">concavity SE:</label>
+        <input type="text" class="form-control item" id="concavity_se" name="concavity_se"><br><br>
+        </div>
+        <div class="form-group">
+        <label for="concave points_se">concave points SE:</label>
+        <input type="text" class="form-control item" id="concave points_se" name="concave points_se"><br><br>
+        </div>
+        <div class="form-group">
+        <label for="symmetry_se">symmetry SE:</label>
+        <input type="text" class="form-control item" id="symmetry_se" name="symmetry_se"><br><br>
+        </div>
+        <div class="form-group">
+        <label for="fractal_dimension_se">Fractal Dimension SE:</label>
+<input type="text" class="form-control item" id="fractal_dimension_se" name="fractal_dimension_se"><br><br>
+        </div>
+        <div class="form-group">
+<label for="radius_worst">Radius Worst:</label>
+<input type="text" class="form-control item" id="radius_worst" name="radius_worst"><br><br>
+        </div>
+        <div class="form-group">
+<label for="texture_worst">Texture Worst:</label>
+<input type="text" class="form-control item" id="texture_worst" name="texture_worst"><br><br>
+        </div>
+        <div class="form-group">
+<label for="perimeter_worst">Perimeter Worst:</label>
+<input type="text" class="form-control item" id="perimeter_worst" name="perimeter_worst"><br><br>
+        </div>
+        <div class="form-group">
+<label for="area_worst">Area Worst:</label>
+<input type="text" class="form-control item" id="area_worst" name="area_worst"><br><br>
+        </div>
+        <div class="form-group">
+<label for="smoothness_worst">Smoothness Worst:</label>
+<input type="text" class="form-control item" id="smoothness_worst" name="smoothness_worst"><br><br>
+        </div>
+        <div class="form-group">
+<label for="compactness_worst">Compactness Worst:</label>
+<input type="text" class="form-control item" id="compactness_worst" name="compactness_worst"><br><br>
+        </div>
+        <div class="form-group">
+<label for="concavity_worst">Concavity Worst:</label>
+<input type="text" class="form-control item" id="concavity_worst" name="concavity_worst"><br><br>
+        </div>
+        <div class="form-group">
+<label for="concave_points_worst">Concave Points Worst:</label>
+<input type="text" class="form-control item" id="concave_points_worst" name="concave_points_worst"><br><br>
+        </div>
+        <div class="form-group">
+<label for="symmetry_worst">Symmetry Worst:</label>
+<input type="text" class="form-control item" id="symmetry_worst" name="symmetry_worst"><br><br>
+        </div>
+        <div class="form-group">
+<label for="fractal_dimension_worst">Fractal Dimension Worst:</label>
+<input type="text" class="form-control item" id="fractal_dimension_worst" name="fractal_dimension_worst"><br><br>
+        </div>
+       
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-block create-account">Submit</button>
+        </div>
+        
+    </form>
+</div>
+</body>
+</html>
